@@ -2,13 +2,13 @@
   "users": [
     {
 	  "hotkey": "ctrl+alt+1",
-      "username": "papa",
-      "password": "123123"
+      "username": "example1",
+      "password": "password1"
     },
 	{
 	  "hotkey": "ctrl+alt+2",
-      "username": "mama",
-      "password": "456456"
+      "username": "example2",
+      "password": "password2"
 	}
   ]
 }
