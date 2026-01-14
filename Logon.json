@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+	  "hotkey": "ctrl+alt+1",
+      "username": "papa",
+      "password": "123123"
+    },
+	{
+	  "hotkey": "ctrl+alt+2",
+      "username": "mama",
+      "password": "456456"
+	}
+  ]
+}
