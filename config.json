@@ -1,0 +1,14 @@
+{
+  "autoEnter": true,
+  "interval": 0.02,
+  "type": [
+    {
+	  "key": "ctrl+alt+1",
+      "string": "sentence 1"
+    },
+	{
+	  "key": "ctrl+alt+2",
+      "string": "sentence 2"
+	}
+  ]
+}

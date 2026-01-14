@@ -1,28 +1,21 @@
 import json
 import pyautogui
 import keyboard
-import pyperclip
 
-pyautogui.FAILSAFE = True
-
-with open("Logon.json", "r", encoding="utf-8") as f:
+with open("config.json", "r", encoding="utf-8") as f:
     data = json.load(f)
 
-def init(username, password, hotkey):
-
+def init(text, hotkey):
     for key in hotkey.lower().split("+"):
         keyboard.release(key)
 
-    pyperclip.copy(username)
-    pyautogui.hotkey("ctrl", "v")
-    pyautogui.press("tab")
-    pyperclip.copy(password)
-    pyautogui.hotkey("ctrl", "v")
+    pyautogui.write(text, interval=data["interval"])
+    if data["autoEnter"] == 1: pyautogui.press("enter")
 
-for user in data["users"]:
+for s in data["type"]:
     keyboard.add_hotkey(
-        user["hotkey"],
+        s["key"],
         init,
-        args=(user["username"], user["password"], user["hotkey"]),
-    )
+        args=(s["string"], s["key"]),)
+
 keyboard.wait()
